@@ -13,11 +13,10 @@
 **Использование:**
 1. Клонировать репозиторий
    
-git clone https://github.com/username/ansible-docker-check.git
-
-cd ansible-docker-check
+git clone https://github.com/rokot-bot/ansible_docker_check.git
+cd ansible_docker_check
 
 3. Настроить inventory.yml с IP-адресами своих серверов.Рекомендуется использовать SSH-ключи - в текущем виде проект настроен на них.
 При необходимости можно дополнить inventory логинами и паролями. Для это под адресом каждого хоста нужно прописать ansible_user и ansible_password, отключить host_key_checking в конфиге.
 4. Запустить плейбук
-ansible-playbook site.yml
+ansible-playbook -i inventory.yml playbook.yml
