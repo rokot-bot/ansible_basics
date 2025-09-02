@@ -13,6 +13,7 @@
 1. Клонировать репозиторий
    
 git clone https://github.com/username/ansible-docker-check.git
+
 cd ansible-docker-check
 
 3. Настроить inventory.yml с IP-адресами своих серверов.Рекомендуется использовать SSH-ключи - в текущем виде проект настроен на них.
