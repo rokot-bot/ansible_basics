@@ -1,0 +1,40 @@
+office1_servers:
+  hosts:
+    prod:
+      ansible_host: 10.10.0.2
+    test:
+      ansible_host: 10.10.0.3
+office2_servers:
+  children:
+    office2_servers:
+      hosts:
+        prod_web:
+          ansible_host: 10.20.0.2
+        prod_db:
+          ansible_host: 10.20.0.3
+        test_web:
+          ansible_host: 10.20.0.4
+        test_db:
+          ansible_host: 10.20.0.5
+        server1:
+          ansible_host: 10.20.0.6
+        server2:
+          ansible_host: 10.20.0.7
+        server3:
+          ansible_host: 10.20.0.8
+        server4:
+          ansible_host: 10.20.0.9
+    office2_workstations:
+      hosts:
+        arm1:
+          ansible_host: 10.21.0.2
+        arm2:
+          ansible_host: 10.21.0.3
+        arm3:
+          ansible_host: 10.21.0.4
+        arm4:
+          ansible_host: 10.21.0.5
+        arm5:
+          ansible_host: 10.21.0.6
+        arm6:
+          ansible_host: 10.21.0.7
